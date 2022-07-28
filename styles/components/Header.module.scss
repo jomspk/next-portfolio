@@ -1,0 +1,16 @@
+.header {
+  background-color: black;
+  padding: 12px 0 12px 0;
+  &-title {
+    padding-left: 40px;
+    &__icon {
+      margin-right: 0;
+      width: auto;
+      height: 40px;
+    }
+  }
+}
+a.link {
+  margin: 0 16px;
+  color: white;
+}
