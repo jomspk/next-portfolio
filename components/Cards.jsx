@@ -1,63 +1,66 @@
-import { Grid, GridItem, Box, Image, Badge, StarIcon } from "@chakra-ui/react";
+import { Grid, GridItem, Box, Image, Link } from "@chakra-ui/react";
 
 export default function Cards() {
-  const property = {
-    imageUrl: "https://bit.ly/2Z4KKcF",
-    imageAlt: "Rear view of modern home with pool",
-    beds: 3,
-    baths: 2,
-    title: "Modern home in city center in the heart of historic Los Angeles",
-    formattedPrice: "$1,900.00",
-    reviewCount: 34,
-    rating: 4,
+  const about = {
+    imageUrl: "/img/about.png",
+    imageAlt: "About Me",
+    title: "About Me",
+  };
+  const products = {
+    imageUrl: "/img/products.png",
+    imageAlt: "Products",
+    title: "Products",
+  };
+  const community = {
+    imageUrl: "/img/community.png",
+    imageAlt: "community",
+    title: "Community",
+  };
+  const comming = {
+    imageUrl: "/img/comming.png",
+    imageAlt: "comming",
+    title: "Comming Soon",
   };
   return (
-    <Grid templateColumns="repeat(4, 1fr)" gap={6}>
-      <GridItem w="100%" h="10" bg="blue.500">
-        <Box maxW="sm" borderWidth="1px" borderRadius="lg" overflow="hidden">
-          <Image src={property.imageUrl} alt={property.imageAlt} />
-
-          <Box p="6">
-            <Box display="flex" alignItems="baseline">
-              <Badge borderRadius="full" px="2" colorScheme="teal">
-                New
-              </Badge>
-              <Box color="gray.500" fontWeight="semibold" letterSpacing="wide" fontSize="xs" textTransform="uppercase" ml="2">
-                {property.beds} beds &bull; {property.baths} baths
-              </Box>
+    <Grid padding="100px 110px 10px 160px" h="200" templateColumns="repeat(2, 1fr)" gap={4}>
+      <GridItem colSpan={1}>
+        <Box maxW="sm" borderWidth="1px" borderRadius="lg">
+          <Link href="/about">
+            <Image h="130px" w="120px" margin="0 auto" padding="0 10px 0 10px" src={about.imageUrl} alt={about.imageAlt} />
+            <Box textAlign="center" p={6} mt="1" fontWeight="semibold" as="h4" lineHeight="tight" noOfLines={1}>
+              {about.title}
             </Box>
-
-            <Box mt="1" fontWeight="semibold" as="h4" lineHeight="tight" noOfLines={1}>
-              {property.title}
+          </Link>
+        </Box>
+      </GridItem>
+      <GridItem colSpan={1}>
+        <Box maxW="sm" borderWidth="1px" borderRadius="lg">
+          <Link>
+            <Image h="130px" w="100px" margin="0 auto" padding="0 10px 0 10px" src={products.imageUrl} alt={products.imageAlt} />
+            <Box textAlign="center" p={6} mt="1" fontWeight="semibold" as="h4" lineHeight="tight" noOfLines={1}>
+              {products.title}
             </Box>
-
-            <Box>
-              {property.formattedPrice}
-              <Box as="span" color="gray.600" fontSize="sm">
-                / wk
-              </Box>
+          </Link>
+        </Box>
+      </GridItem>
+      <GridItem colSpan={1}>
+        <Box maxW="sm" borderWidth="1px" borderRadius="lg">
+          <Link>
+            <Image h="130px" w="120px" margin="0 auto" padding="0 10px 0 10px" src={community.imageUrl} alt={community.imageAlt} />
+            <Box textAlign="center" p={6} mt="1" fontWeight="semibold" as="h4" lineHeight="tight" noOfLines={1}>
+              {community.title}
             </Box>
-
-            <Box display="flex" mt="2" alignItems="center">
-              {Array(5)
-                .fill("")
-                .map((_, i) => (
-                  <StarIcon key={i} color={i < property.rating ? "teal.500" : "gray.300"} />
-                ))}
-              <Box as="span" ml="2" color="gray.600" fontSize="sm">
-                {property.reviewCount} reviews
-              </Box>
-            </Box>
+          </Link>
+        </Box>
+      </GridItem>
+      <GridItem colSpan={1}>
+        <Box maxW="sm" borderWidth="1px" borderRadius="lg">
+          <Image h="130px" w="120px" margin="0 auto" padding="0 10px 0 10px" src={comming.imageUrl} alt={comming.imageAlt} />
+          <Box textAlign="center" p={6} mt="1" fontWeight="semibold" as="h4" lineHeight="tight" noOfLines={1}>
+            {comming.title}
           </Box>
         </Box>
       </GridItem>
-      <GridItem w="100%" h="10" bg="blue.500" />
-      <GridItem w="100%" h="10" bg="blue.500" />
-      <GridItem w="100%" h="10" bg="blue.500" />
-      <GridItem w="100%" h="10" bg="blue.500" />
-      <GridItem w="100%" h="10" bg="blue.500" />
-      <GridItem w="100%" h="10" bg="blue.500" />
-      <GridItem w="100%" h="10" bg="blue.500" />
     </Grid>
   );
 }

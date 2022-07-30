@@ -18,3 +18,10 @@ a {
 .bg-gradation {
   background: linear-gradient(180deg, #5b59c1 0%, #8133cf 100%);
 }
+
+.App {
+  height: 100vh;
+  background-color: #0d1116;
+  overflow: scroll;
+  text-align: center;
+}
