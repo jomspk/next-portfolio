@@ -1,6 +1,6 @@
 import { Text, Grid, GridItem, Image, Link, Box, Button, Modal, ModalOverlay, ModalContent, ModalHeader, ModalFooter, ModalBody, ModalCloseButton, useDisclosure, Lorem } from "@chakra-ui/react";
 
-export default function Product() {
+export default function Products() {
   const about = {
     imageUrl: "/img/about.png",
     imageAlt: "About Me",
@@ -16,7 +16,6 @@ export default function Product() {
         <GridItem colSpan={1}>
           <Box maxW="sm" borderWidth="1px" borderRadius="lg" margin="0 auto">
             <Box onClick={onOpen}>
-              <Image h="130px" w="120px" margin="0 auto" padding="0 10px 0 10px" src={about.imageUrl} alt={about.imageAlt} />
               <Box textAlign="center" p={6} mt="1" fontWeight="semibold" as="h4" lineHeight="tight" noOfLines={1}>
                 {about.title}
               </Box>
@@ -38,26 +37,6 @@ export default function Product() {
                 </ModalFooter>
               </ModalContent>
             </Modal>
-          </Box>
-        </GridItem>
-        <GridItem colSpan={1}>
-          <Box maxW="sm" borderWidth="1px" borderRadius="lg" margin="0 auto">
-            <Text>hoge</Text>
-          </Box>
-        </GridItem>
-        <GridItem colSpan={1}>
-          <Box maxW="sm" borderWidth="1px" borderRadius="lg" margin="0 auto">
-            <Text>hoge</Text>
-          </Box>
-        </GridItem>
-        <GridItem colSpan={1}>
-          <Box maxW="sm" borderWidth="1px" borderRadius="lg" margin="0 auto">
-            <Text>hoge</Text>
-          </Box>
-        </GridItem>
-        <GridItem colSpan={1}>
-          <Box maxW="sm" borderWidth="1px" borderRadius="lg" margin="0 auto">
-            <Text>hoge</Text>
           </Box>
         </GridItem>
       </Grid>
