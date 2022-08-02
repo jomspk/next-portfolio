@@ -45,7 +45,7 @@ export default function Cards() {
       </GridItem>
       <GridItem colSpan={1}>
         <Box maxW="sm" borderWidth="1px" borderRadius="lg" margin="0 auto">
-          <Link>
+          <Link href="/community">
             <Image h="130px" w="120px" margin="0 auto" padding="0 10px 0 10px" src={community.imageUrl} alt={community.imageAlt} />
             <Box textAlign="center" p={6} mt="1" fontWeight="semibold" as="h4" lineHeight="tight" noOfLines={1}>
               {community.title}
