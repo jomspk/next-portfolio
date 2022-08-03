@@ -1,0 +1,19 @@
+.item-box {
+  border-width: 1px;
+  margin: 0 auto;
+  &__image {
+    height: 130px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 10px 0 10px;
+  }
+}
+
+.modal {
+  max-height: 70%;
+  max-width: 80%;
+  &__image {
+    height: 20em;
+    width: 25em;
+  }
+}
