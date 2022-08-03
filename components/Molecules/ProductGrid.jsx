@@ -9,9 +9,10 @@ export default function ProductGrid({ product }) {
     <GridItem colSpan={1}>
       <Box maxW="sm" borderWidth="1px" borderRadius="lg" margin="0 auto">
         <Box onClick={onOpen}>
-          <Image h="130px" w="100%" margin="0 auto" padding="0 10px 0 10px" src={product.imageURL} alt="No Image" />
-          <Text>{product.title}</Text>
-          <Text>hoge</Text>
+          <Image h="200px" w="100%" margin="0 auto" padding="0 10px 0 10px" src={product.imageURL} alt="No Image" />
+          <Text fontSize="2xl" fontWeight="500">
+            {product.title}
+          </Text>
         </Box>
         <Modal isOpen={isOpen} onClose={onClose}>
           <ModalOverlay />
