@@ -106,7 +106,6 @@ export default function AboutMe() {
           <UnorderedList>
             <ListItem>Ethereum</ListItem>
             <ListItem>Polygon</ListItem>
-            <ListItem>Cardano</ListItem>
           </UnorderedList>
         </Box>
       </Box>
